@@ -58,8 +58,8 @@ void printMenu() {
 	cout << "2. Изменить объект" << endl;
 	cout << "3. Удалить объект" << endl;
 	cout << "4. Вывести данные" << endl;
-	cout << "5. Вывести фамилии стдентов и номера групп, имеющих 4 и 5" << endl;
-	cout << "6. Вывести фамилии стдентов и номера групп, под угрозой отчисления" << endl;
+	cout << "5. Вывести фамилии студентов и номера групп, имеющих 4 и 5" << endl;
+	cout << "6. Вывести фамилии студентов и номера групп, под угрозой отчисления" << endl;
 	cout << "0. Выход" << endl;
 	cout << "Выберете пункт меню: ";
 }
@@ -78,7 +78,7 @@ void changeObject(Marray<Student>& students) {
 		students[safeInput(1, students.getSize()) - 1].change();
 	}
 	else
-		cout << "Список студентов пуст. Нечего изменять\n";
+		cout << "Список студентов пуст.\n";
 	students.sort();
 }
 
@@ -89,7 +89,7 @@ void deleteObject(Marray<Student>& students) {
 		students -= safeInput(1, students.getSize()) - 1;
 	}
 	else
-		cout << "Список студентов пуст. Нечего удалять\n";
+		cout << "Список студентов пуст.\n";
 	students.sort();
 }
 
@@ -146,6 +146,6 @@ void searchDeducting(Marray<Student>& students) {
 		}
 
 		if (!isPrint)
-			cout << "Студентов, готоввящихся к отчислению нет\n";
+			cout << "Студентов, готовящихся к отчислению нет\n";
 	}
 }
